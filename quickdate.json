@@ -1,0 +1,57 @@
+{
+	"id": "com.rohitchouhan.quickdate",
+	"version": "1.0.0",
+	"name": "Quick Date",
+	"description": "A date liabrary to get the date of the day.",
+	"newInstancePrefix": "QucikDate",
+	"icon": "https://tools.codesler.com/SAC-Custom-Widget/icon.png",
+	"vendor": "SAP",
+	"eula": "",
+	"license": "",
+	"webcomponents": [
+		{
+			"kind": "main",
+			"tag": "com-rohitchouhan-quickdate-main",
+			"url": "https://tools.codesler.com/quickdate/main.js",
+			"integrity": "",
+			"ignoreIntegrity": true
+		  }
+	],
+	"properties": {
+		"date": {
+			"type": "string",
+			"description": "Date",
+			"default": ""
+		}
+	},
+	"methods": {
+		"setDate": {
+			"description": "Sets date",
+			"parameters": [{
+				"name": "date",
+				"type": "string",
+				"description": "Give Date, ex. 202012"
+			}],
+			"body": "this.date = date;"
+		},
+		"getYear": {
+			"returnType": "string",
+			"description": "Return year",
+			"body": "return this.date.substring(0,4);"
+		},
+		"getMonth": {
+			"returnType": "string",
+			"description": "Return year",
+			"body": "return this.date.substring(4,6);"
+		},
+		"getPeriod":{
+			"returnType": "string",
+			"description": "Return year"
+		}
+	},
+	"events": {
+		"onClick": {
+			"description": "Called when the user clicks the Colored Box."
+		}
+	}
+}
