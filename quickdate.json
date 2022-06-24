@@ -49,7 +49,7 @@
 			"description": "Return year",
 			"body": "return this.date.substring(4,6);"
 		},
-		"getPeriod":{
+		"getMyDate":{
 			"returnType": "string",
 			"description": "Return year"
 		}

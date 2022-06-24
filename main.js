@@ -31,21 +31,10 @@ display: block;
       this._props = { ...this._props, ...changedProperties };
     }
     
-    // onCustomWidgetAfterUpdate(changedProperties) {
-    //   if ("color" in changedProperties) {
-    //     this.style["background-color"] = changedProperties["color"];
-    //   }
-    //   if ("opacity" in changedProperties) {
-    //     this.style["opacity"] = changedProperties["opacity"];
-    //   }
-    //   if ("radius" in changedProperties) {
-    //     this.style["border-color"] = changedProperties["radius"];
-    //   }
-    // }
-
-    
-    set mydate(value){
-      this._mydate = value;
+    onCustomWidgetAfterUpdate(changedProperties) {
+      if ("date" in changedProperties) {
+        this.mydate = changedProperties["date"];
+      }
     }
 
     get mydate(){
