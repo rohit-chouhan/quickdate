@@ -18,6 +18,7 @@ display: block;
       super();
       let shadowRoot = this.attachShadow({ mode: "open" });
       shadowRoot.appendChild(template.content.cloneNode(true));
+      this._mydate="202201";
       this.addEventListener("click", (event) => {
         alert("Click the button");
         var event = new Event("onClick");
@@ -42,11 +43,14 @@ display: block;
     //   }
     // }
 
-    get Period(){
-        var current_date = date;
-        return current_date;
-    }
     
+    set mydate(value){
+      this._mydate = value;
+    }
+
+    get mydate(){
+      return this._mydate;
+    }
   }
   customElements.define("com-rohitchouhan-quickdate-main", ColoredBox);
 })();
