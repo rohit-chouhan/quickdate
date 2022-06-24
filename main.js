@@ -43,7 +43,7 @@ display: block;
     // }
 
     get Period(){
-        var current_date = changedProperties["date"];
+        var current_date = date;
         return current_date;
     }
     
