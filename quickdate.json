@@ -51,7 +51,8 @@
 		},
 		"getMyDate":{
 			"returnType": "string",
-			"description": "Return year"
+			"description": "Return year",
+			"body": "return this.mydate;"
 		}
 	},
 	"events": {
